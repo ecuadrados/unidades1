@@ -43,6 +43,14 @@ class UnidadHabitanteCalleController extends Controller
         $unidadHabitanteCalle->tipo_documento = $request->tipo_documento;
         $unidadHabitanteCalle->documento = $request->documento;
         $unidadHabitanteCalle->fecha_nacimiento = $request->fecha_nacimiento;
+        $unidadHabitanteCalle->sexo = $request->sexo;
+        $unidadHabitanteCalle->certificado_vecindad = $request->vecindad;
+        $unidadHabitanteCalle->barrio = $request->barrio;
+        $unidadHabitanteCalle->sector = $request->sector;
+        $unidadHabitanteCalle->tiempo = $request->tiempo;
+        $unidadHabitanteCalle->estado_civil = $request->estado_civil;
+        $unidadHabitanteCalle->escolaridad = $request->escolaridad;
+        $unidadHabitanteCalle->otra_escolaridad = $request->otra_escolaridad;
         $unidadHabitanteCalle->edad = $request->edad;
         $unidadHabitanteCalle->direccion = $request->direccion;
         $unidadHabitanteCalle->telefono = $request->telefono;
