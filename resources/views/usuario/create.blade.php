@@ -66,9 +66,11 @@
                         <div class="col-md-6">
                             <select class="form-control select2" name="type_user" style="width: 100%;" required>
                                 <option value="">--- Selecione tipo usuario ---</option>
+                                <option value="admin">Administrador</option>
                                 <option value="user_mujer">Unidad Mujer</option>
                                 <option value="user_juventud">Unidad Juventud</option>
                                 <option value="user_habitante_calle">Unidad Habitante Calle</option>
+                                <option value="user_kit">Entrega Kit</option>
                             </select>
                         </div>
                         </div>

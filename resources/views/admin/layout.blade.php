@@ -18,6 +18,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.min.css') }}">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="{{ asset('adminlte/plugins/select2/css/select2.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+  
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -241,6 +245,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           @endif
+          @if(@Auth::user()->hasRole('user_kit') || @Auth::user()->hasRole('admin'))
+          <li class="nav-item">
+            <a href="{{route('unidadgeneral.index')}}" class="nav-link" style="color: white !important;">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Entrega Kit
+              </p>
+            </a>
+          </li>
+          @endif
+          @if(@Auth::user()->hasRole('admin'))
+          <li class="nav-item">
+            <a href="{{route('meta.index')}}" class="nav-link" style="color: white !important;">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Infancia
+              </p>
+            </a>
+          </li>
+          @endif
           @if(@Auth::user()->hasRole('admin'))
           <li class="nav-item">
             <a href="{{route('usuario.create')}}" class="nav-link" style="color: white !important;">
@@ -331,14 +355,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- AdminLTE App -->
 <script src="{{ asset('adminlte/js/adminlte.min.js') }}"></script>
 
+<script src="{{ asset('js/datatablelistar.js') }}"></script>
+<script src="{{ asset('js/datatablelistarcentro.js') }}"></script>
+<script src="{{ asset('js/actividad.js') }}"></script>
+<!-- Select2 -->
+<script src="{{ asset('adminlte/plugins/select2/js/select2.full.min.js') }}"></script>
 <script>
-  if (localStorage.getItem("totalMenor30") != null) {
-    $("#notificacion").html(localStorage.getItem("totalMenor30"));
-    $("#notificacion3").html(localStorage.getItem("totalMenor30")+" Contratos con menos de 1 mes");
-  }
-  if (localStorage.getItem("cantVencidos") != null) {
-    $("#vencido").html(localStorage.getItem("cantVencidos")+" Contratos vencidos");
-  }                                      
+$(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
+
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+  })
 </script>
 </body>
 </html>

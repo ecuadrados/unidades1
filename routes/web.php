@@ -25,6 +25,17 @@ Route::resource('/beneficiario', 'BeneficiarioController');
 Route::resource('/unidadmujer', 'UnidadMujerController');
 Route::resource('/unidadjuventud', 'UnidadJuventudController');
 Route::resource('/unidadhabitantecalle', 'UnidadHabitanteCalleController');
+Route::resource('/unidadgeneral', 'UnidadGeneralController');
+Route::resource('/meta', 'MetaController');
+Route::resource('/actividad', 'ActividadController');
+Route::get('/unidadgeneral/ver/{id}', 'UnidadGeneralController@ver')->name('unidadgeneral.ver');
+Route::get('/unidadgeneral/usuario/{centro?}', 'UnidadGeneralController@lista')->name('unidadgeneral.lista');
+Route::post('/unidadgeneral/kit', 'KitController@store')->name('kit.store');
+Route::post('/actividad/poblacion', 'ActividadController@poblacion')->name('actividad.poblacion');
+Route::get('/actividad/verpoblacion/{id}', 'ActividadController@verpoblacion')->name('actividad.verpoblacion');
+
+// Route::get('/unidadgeneral/show/{id}', 'UnidadGeneralController@show')->name('unidadgeneral.show');
+
 
 
 
