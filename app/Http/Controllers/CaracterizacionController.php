@@ -85,14 +85,14 @@ class CaracterizacionController extends Controller
         $caracterizacion->trabajador_independiente = $request->Trabajador_independiente;
         $caracterizacion->informal = $request->Informal;
         $caracterizacion->formal = $request->Formal;
-        $caracterizacion->ideas_negocio = $request->idea_negocio;
+        $caracterizacion->ideas_negocios = $request->idea_negocio;
         $caracterizacion->cual_idea = $request->Cual_idea;
         $caracterizacion->emprendimiento = $request->Emprendimiento;
-        $caracterizacion->fortalecimimento = $request->Fortalecimiento;
+        $caracterizacion->fortalecimiento = $request->Fortalecimiento;
         $caracterizacion->programa_gubernamental = $request->Gubernamental;
         $caracterizacion->fecha_encuesta = $request->fecha_encuesta;
         $caracterizacion->ref_id = $request->numero_encuesta;
-        $unidadHabitanteCalle->save();
+        $caracterizacion->save();
         return redirect()->route('unidadhabitantecalle.index');
     }
 
