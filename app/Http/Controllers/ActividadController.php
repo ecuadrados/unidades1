@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Actividad;
 use App\ConsolidadoPoblacion;
 use App\Poblacion;
+use App\Barrio;
 use Illuminate\Http\Request;
 
 class ActividadController extends Controller
@@ -55,6 +56,7 @@ class ActividadController extends Controller
         $consolidado_poblacion->organizacion_actividad = $request->organizacion_actividad;
         $consolidado_poblacion->lugar_actividad = $request->lugar_actividad;
         $consolidado_poblacion->fecha_actividad = $request->fecha_actividad;
+        $consolidado_poblacion->barrio = $request->barrio;
         // $meta->fecha_meta = $request->fecha_meta;       
         $consolidado_poblacion->save();
         $datos_poblacion =  json_decode($request->datos_poblacion);
@@ -173,7 +175,8 @@ class ActividadController extends Controller
         // $meta = Meta::findOrFail($id);
         // $actividad = Actividad::where('meta_id','=',$id)->get();
         $actividad = Actividad::findOrFail($id);
-        return view('actividad.detalle',compact('actividad'));
+        $barrios = Barrio::all()->sortBy("nombre");;
+        return view('actividad.detalle',compact('actividad','barrios'));
     }
 
     /**
