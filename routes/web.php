@@ -28,6 +28,7 @@ Route::resource('/unidadhabitantecalle', 'UnidadHabitanteCalleController');
 Route::resource('/unidadgeneral', 'UnidadGeneralController');
 Route::resource('/meta', 'MetaController');
 Route::resource('/actividad', 'ActividadController');
+Route::resource('/caracterizacion', 'CaracterizacionController');
 Route::get('/unidadgeneral/ver/{id}', 'UnidadGeneralController@ver')->name('unidadgeneral.ver');
 Route::get('/unidadgeneral/usuario/{centro?}', 'UnidadGeneralController@lista')->name('unidadgeneral.lista');
 Route::post('/unidadgeneral/kit', 'KitController@store')->name('kit.store');
