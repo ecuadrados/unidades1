@@ -64,7 +64,7 @@
                       <input type="number" min="1" name="edad" class="form-control" id="edad">
                     </div>
                     <div class="form-group col-4">
-                      <label for="contratista_fecha_inicio">Sexo</label>
+                      <label for="sexo">Sexo</label>
                       <br>
                         <input type="radio" id="femenino" name="sexo" value="Femenino">
                         <label for="femenino">Femenino</label>
@@ -385,10 +385,105 @@
                     </div>
                   </div>
                   <div class="tab-pane fade" id="custom-tabs-three-interes" role="tabpanel" aria-labelledby="custom-tabs-three-interes-tab">
-                     interes
+                      <div class="row">
+                        <div class="form-group col-12">
+                          <textarea name="textarea" rows="4" cols="100" placeholder="Observación"></textarea>
+                        </div>                                             
+                     </div>
                   </div>
                   <div class="tab-pane fade" id="custom-tabs-three-diferencial" role="tabpanel" aria-labelledby="custom-tabs-three-diferencial-tab">
-                     diferencial
+                     <div class="row">
+                      <div class="form-group col-4">
+                        <label for="nombre">Nombre(s) y Apellido(s)</label>
+                        <input type="text" name="nombre_apellido" class="form-control" id="nombre_apellido" placeholder="Ingrese Nombre(s) y Apellido(s)">
+                      </div>
+                      <div class="form-group col-4">
+                        <label for="contratista_cedula">Documento</label>
+                        <input type="text" name="documento_familiar" class="form-control" id="documento_familiar" placeholder="Ingrese Documento">
+                      </div>
+                      <div class="form-group col-4">
+                        <label>Tipo Documento</label>
+                        <select class="form-control" name="tipo_documento_familiar" id="tipo_documento_familiar" style="width: 100%;">
+                              <option value="">--- Selecione Tipo Documento ---</option>
+                              <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+                              <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                              <option value="Registro Civil">Registro Civil</option>
+                              <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-4">
+                        <label for="apellido">Eps</label>
+                        <input type="text" name="eps" class="form-control" id="eps" placeholder="Ingrese Eps">
+                      </div>
+                      <div class="form-group col-4">
+                        <label>Regimen</label>
+                        <select class="form-control" name="regimen" id="regimen" style="width: 100%;">
+                              <option value="">--- Selecione Regimen ---</option>
+                              <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+                              <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                              <option value="Registro Civil">Registro Civil</option>
+                              <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-4">
+                        <label for="apellido">Sisben</label>
+                        <input type="text" name="sisben_familiar" class="form-control" id="sisben_familiar" placeholder="Ingrese Sisben">
+                      </div>
+                      <div class="form-group col-4">
+                        <label for="apellido">E</label>
+                        <input type="text" name="E" class="form-control" id="E" placeholder="Ingrese Sisben">
+                      </div>
+                      <div class="form-group col-4">
+                        <label for="apellido">G.P</label>
+                        <input type="text" name="GP" class="form-control" id="GP" placeholder="Ingrese G.P">
+                      </div>
+                      <div class="form-group col-4">
+                        <label for="apellido">S.V</label>
+                        <input type="text" name="SV" class="form-control" id="SV" placeholder="Ingrese S.V">
+                      </div>
+                      <div class="form-group col-4">
+                        <label for="apellido">N.A</label>
+                        <input type="text" name="NA" class="form-control" id="NA" placeholder="Ingrese N.A">
+                      </div>
+                      <div class="form-group col-4">
+                      <label for="edad">Edad</label>
+                      <input type="number" min="1" name="edad_familiar" class="form-control" id="edad_familiar">
+                      </div>
+                      <div class="form-group col-4">
+                        <label>Sexo</label>
+                        <select class="form-control" name="sexo_familiar" id="sexo_familiar" style="width: 100%;">
+                          <option value="">Seleccione</option>
+                          <option value="Femenino">Femenino</option>
+                          <option value="Masculino">Masculino</option>                        
+                        </select> 
+                      </div>
+                      <div class="form-group col-4">
+                        <label for="apellido">Parentesco</label>
+                        <input type="text" name="parentesco" class="form-control" id="parentesco" placeholder="Ingrese parentesco">
+                      </div>
+                      <div class="form-group col-4"  style="margin-top: 2rem;">
+                        <button type="button" name="btnAgregar" id="btnAgregar" class="btn btn-primary btn-sm" onclick="agregarNucleoFamiliar()">Agregar</button>
+                      </div>
+                     </div>
+                     <!-- row -->
+                     <div class="row">
+                        <table id="tblNucleoFamiliar" class="table table-bordered table-striped">
+                          <thead>
+                              <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Nombre Completo</th>                                               
+                              <th scope="col">Documento</th>
+                              <th scope="col">Tipo Documento</th>
+                              <th scope="col">Sexo</th>
+                              <th scope="col">Edad</th>
+                              <th scope="col">Parentesco</th>
+                              </tr>
+                          </thead>
+                          <tbody>                       
+                          </tbody>
+                        </table>
+                     </div>
+                     <!-- row -->
                   </div>
                   <div class="tab-pane fade" id="custom-tabs-three-observaciones" role="tabpanel" aria-labelledby="custom-tabs-three-observaciones-tab">
                      observaciones
@@ -405,4 +500,58 @@
         </div>
       </div>
       <!-- container -->
+      <script>
+        var nucleoFamiliar = [];
+        var cont = 0;
+        function agregarNucleoFamiliar(){
+          cont++;
+          let nombre_completo = $("#nombre_apellido").val();          
+          let documento = $("#documento_familiar").val();
+          let tipo_documento = $("#tipo_documento_familiar").val();
+          let eps =$("#eps").val();
+          let regimen = $("#regimen").val();
+          let sisben = $("#sisben_familiar").val();
+          let E =$("#E").val();
+          let GP = $("#GP").val();
+          let SV =$("#SV").val();
+          let NA =$("#NA").val();
+          let edad =$("#edad_familiar").val();
+          let sexo = $("#sexo_familiar").val();
+          let parentesco =$("#parentesco").val();
+         
+            objNucleoFamiliar = {'nombre_completo':nombre_completo,'documento':documento, 
+            'tipo_documento':tipo_documento, 'eps':eps, 'regimen':regimen,
+            'sisben':sisben, 'E':E, 'GP': GP, 'SV': SV, 'NA': NA,
+            'edad': edad, 'sexo': sexo, 'parentesco': parentesco}
+            nucleoFamiliar.push(objNucleoFamiliar);
+            console.log(nucleoFamiliar);
+
+            //agregar fila a tabla
+          let fila = '<tr>'+
+                '<td>' + cont + '</td>'+
+                '<td>' + nombre_completo + '</td>'+
+                '<td>' + documento + '</td>'+
+                '<td>' + tipo_documento + '</td>'+
+                '<td>' + sexo + '</td>'+
+                '<td>' + edad + '</td>'+
+                '<td>' + parentesco + '</td>'+
+              '</tr>';      
+          $('#tblNucleoFamiliar tbody').append(fila);
+
+          //   $("#datos_poblacion").val( JSON.stringify(poblacion));
+            $("#nombre_apellido").val("");
+            $("#documento_familiar").val("");
+            $("#tipo_documento_familiar").val("");
+            $("#eps").val("");
+            $("#regimen").val("");
+            $("#sisben_familiar").val("");
+            $("#E").val("");
+            $("#GP").val("");           
+            $("#SV").val(""); 
+            $("#NA").val("");           
+            $("#edad_familiar").val(""); 
+            $("#sexo_familiar").val(""); 
+            $("#parentesco").val("");                      
+        }
+      </script>
       @endsection
