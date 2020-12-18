@@ -41,6 +41,15 @@
                         <input type="text" name="organizacion_actividad" class="form-control" id="organizacion_actividad" placeholder="Ingrese Organización o Institución" required>
                     </div>
                     <div class="form-group col-md-3 col-sm-12">
+                  <label>Barrio</label>
+                  <select class="form-control select2" name="barrio" style="width: 100%;" required>
+                        <option value="">--- Selecione Barrio ---</option>
+                        @foreach ($barrios as $barrio)
+                            <option value="{{ $barrio->id }}">{{ $barrio->nombre }}</option>
+                        @endforeach
+                   </select>
+                </div>
+                    <div class="form-group col-md-3 col-sm-12">
                         <label for="lugar_actividad">Lugar de Actividad</label>
                         <input type="text" name="lugar_actividad" class="form-control" id="lugar_actividad" placeholder="Ingrese Lugar de la Actividad" required>
                     </div>

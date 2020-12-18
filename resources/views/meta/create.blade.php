@@ -37,6 +37,16 @@
                     <label for="nombre">Cuantificación de meta</label>
                     <input type="number" min="0" name="valor" class="form-control" id="valor" placeholder="Ingrese Cuantificación de meta">
                   </div>
+                  <div class="form-group">
+                    <label>Programa</label>
+                        <select class="form-control" name="programa" id="programa" style="width: 100%;">
+                          <option value="">Seleccione</option>
+                          <option value="Primera Infancia">Primera Infancia</option>
+                          <option value="Infancia Protección">Infancia Protección</option> 
+                          <option value="Lúdica y Participación">Primera Infancia</option>
+                          <option value="Fortalecimiento Familiar">Fortalecimiento Familiar</option>                        
+                        </select>                    
+                    </div>
                   <!-- <div class="form-group">
                     <label for="contratista_fecha_inicio">Fecha</label>
                     <input type="date" name="fecha_meta" class="form-control" id="fecha_meta" required>
