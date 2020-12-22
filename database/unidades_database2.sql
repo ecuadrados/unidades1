@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-12-2020 a las 20:53:58
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.6
+-- Tiempo de generación: 14-12-2020 a las 05:26:32
+-- Versión del servidor: 10.4.6-MariaDB
+-- Versión de PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -70,79 +71,6 @@ CREATE TABLE `beneficiarios` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `caracterizacion`
---
-
-CREATE TABLE `caracterizacion` (
-  `id` int(11) NOT NULL,
-  `nombres` varchar(50) NOT NULL,
-  `apellidos` varchar(50) NOT NULL,
-  `tipo_documento` varchar(100) NOT NULL,
-  `documento` varchar(100) NOT NULL,
-  `edad` int(11) DEFAULT NULL,
-  `genero` varchar(50) DEFAULT NULL,
-  `direccion` varchar(100) DEFAULT NULL,
-  `barrio` varchar(100) DEFAULT NULL,
-  `localidad` varchar(50) DEFAULT NULL,
-  `estrato` int(2) DEFAULT NULL,
-  `celular` varchar(50) DEFAULT NULL,
-  `otro_contacto` varchar(50) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `estado_civil` varchar(50) DEFAULT NULL,
-  `condiciones_vivienda` varchar(50) DEFAULT NULL,
-  `tipo_vivienda` varchar(50) DEFAULT NULL,
-  `cuantos_cuartos` int(11) DEFAULT NULL,
-  `cuantos_hogares` int(11) DEFAULT NULL,
-  `servicio_publico` varchar(2) DEFAULT NULL,
-  `agua` varchar(2) DEFAULT 'No',
-  `electricidad` varchar(2) DEFAULT NULL,
-  `gas` varchar(2) DEFAULT NULL,
-  `alcantarillado` varchar(2) DEFAULT NULL,
-  `internet` varchar(2) DEFAULT NULL,
-  `etnia` varchar(50) DEFAULT NULL,
-  `persona_discapacidad` varchar(2) DEFAULT NULL,
-  `victima_conflicto` varchar(2) DEFAULT NULL,
-  `joven_riesgo` varchar(2) DEFAULT NULL,
-  `madre_cabeza` varchar(2) DEFAULT NULL,
-  `migrante_venezolano` varchar(2) DEFAULT NULL,
-  `certificado_permanencia` varchar(2) DEFAULT NULL,
-  `nivel_academico` varchar(50) DEFAULT NULL,
-  `programa_salud` varchar(50) DEFAULT NULL,
-  `nombre_eps` varchar(50) DEFAULT NULL,
-  `sisben` varchar(11) DEFAULT NULL,
-  `puntaje_sisben` varchar(50) DEFAULT NULL,
-  `observaciones` varchar(300) DEFAULT NULL,
-  `personas_cargo` varchar(2) DEFAULT NULL,
-  `cuantas_persona` varchar(50) DEFAULT NULL,
-  `niños_escolaridad` varchar(2) DEFAULT NULL,
-  `situacion_calle` varchar(2) DEFAULT NULL,
-  `consume_sustancia` varchar(2) DEFAULT NULL,
-  `violencia_intrafamiliar` varchar(2) DEFAULT NULL,
-  `pertenece_organizacion` varchar(2) DEFAULT NULL,
-  `empleado` varchar(11) DEFAULT NULL,
-  `desempleado` varchar(11) DEFAULT NULL,
-  `trabajador_independiente` varchar(11) DEFAULT NULL,
-  `informal` varchar(11) DEFAULT NULL,
-  `formal` varchar(2) DEFAULT NULL,
-  `ideas_negocios` varchar(2) DEFAULT NULL,
-  `cual_idea` varchar(100) DEFAULT NULL,
-  `emprendimiento` varchar(2) DEFAULT NULL,
-  `fortalecimiento` varchar(11) DEFAULT NULL,
-  `programa_gubernamental` varchar(2) DEFAULT NULL,
-  `fecha_encuesta` date DEFAULT NULL,
-  `ref_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `caracterizacion`
---
-
-INSERT INTO `caracterizacion` (`id`, `nombres`, `apellidos`, `tipo_documento`, `documento`, `edad`, `genero`, `direccion`, `barrio`, `localidad`, `estrato`, `celular`, `otro_contacto`, `email`, `estado_civil`, `condiciones_vivienda`, `tipo_vivienda`, `cuantos_cuartos`, `cuantos_hogares`, `servicio_publico`, `agua`, `electricidad`, `gas`, `alcantarillado`, `internet`, `etnia`, `persona_discapacidad`, `victima_conflicto`, `joven_riesgo`, `madre_cabeza`, `migrante_venezolano`, `certificado_permanencia`, `nivel_academico`, `programa_salud`, `nombre_eps`, `sisben`, `puntaje_sisben`, `observaciones`, `personas_cargo`, `cuantas_persona`, `niños_escolaridad`, `situacion_calle`, `consume_sustancia`, `violencia_intrafamiliar`, `pertenece_organizacion`, `empleado`, `desempleado`, `trabajador_independiente`, `informal`, `formal`, `ideas_negocios`, `cual_idea`, `emprendimiento`, `fortalecimiento`, `programa_gubernamental`, `fecha_encuesta`, `ref_id`) VALUES
-(1, 'Makoto', 'asdas', 'Cédula de Ciudadanía', '3434', 42, 'Masculino', 'fsdfsd', 'Tarjeta de Identidad', 'Tarjeta de Identidad', 3, '3434', 'sdfsd', 'evil_orochi_kairi@hotmail.com', 'Separado(a)', 'Propio', 'Cuarto', 3, 2, 'SI', 'Si', 'Si', NULL, 'Si', NULL, 'Afro', NULL, NULL, NULL, NULL, NULL, NULL, 'Bachillerato', 'Regimen_Contributivo', 'fdsf', 'Si', '12', NULL, 'Si', '3', 'Si', 'No', 'No', 'No', 'Si', 'Si', 'No', 'Si', 'Si', 'No', 'Si', 'dfgdf', 'Si', 'Si', 'Si', '2020-12-22', 123);
 
 -- --------------------------------------------------------
 
@@ -408,30 +336,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (16, '2020_10_09_232108_create_unidad__generals_table', 3),
 (17, '2020_10_18_222038_create_kits_table', 4),
 (18, '2020_10_22_015319_create_centro__vidas_table', 5);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `nucleofamiliar_caracterizacion`
---
-
-CREATE TABLE `nucleofamiliar_caracterizacion` (
-  `id` int(11) NOT NULL,
-  `nombre_apellido` varchar(100) DEFAULT NULL,
-  `documento` varchar(100) DEFAULT NULL,
-  `tipo_documento` varchar(100) DEFAULT NULL,
-  `eps` varchar(100) DEFAULT NULL,
-  `regimen` varchar(50) DEFAULT NULL,
-  `sisben` varchar(50) DEFAULT NULL,
-  `E` varchar(50) DEFAULT NULL,
-  `G.P` varchar(50) DEFAULT NULL,
-  `S.V` varchar(50) DEFAULT NULL,
-  `N.A` varchar(50) DEFAULT NULL,
-  `edad` int(11) DEFAULT NULL,
-  `genero` varchar(50) DEFAULT NULL,
-  `parentesco` varchar(50) DEFAULT NULL,
-  `caracterizacion_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -6842,12 +6746,6 @@ ALTER TABLE `beneficiarios`
   ADD UNIQUE KEY `beneficiarios_beneficiario_documento_unique` (`beneficiario_documento`);
 
 --
--- Indices de la tabla `caracterizacion`
---
-ALTER TABLE `caracterizacion`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `centro__vidas`
 --
 ALTER TABLE `centro__vidas`
@@ -6882,12 +6780,6 @@ ALTER TABLE `meta_infacia`
 -- Indices de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `nucleofamiliar_caracterizacion`
---
-ALTER TABLE `nucleofamiliar_caracterizacion`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -6973,12 +6865,6 @@ ALTER TABLE `beneficiarios`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `caracterizacion`
---
-ALTER TABLE `caracterizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT de la tabla `centro__vidas`
 --
 ALTER TABLE `centro__vidas`
@@ -7013,12 +6899,6 @@ ALTER TABLE `meta_infacia`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT de la tabla `nucleofamiliar_caracterizacion`
---
-ALTER TABLE `nucleofamiliar_caracterizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `poblacion_infancia`

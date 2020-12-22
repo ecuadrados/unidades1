@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Caracterizacion;
+use App\NucleoFamiliarCaracterizacion;
 use Illuminate\Http\Request;
 
 class CaracterizacionController extends Controller
@@ -93,6 +94,26 @@ class CaracterizacionController extends Controller
         $caracterizacion->fecha_encuesta = $request->fecha_encuesta;
         $caracterizacion->ref_id = $request->numero_encuesta;
         $caracterizacion->save();
+        $datos_nucleo_familiar =  json_decode($request->datos_nucleo_familiar);
+
+        for($i=0; $i<count($datos_nucleo_familiar); $i++) {
+            $nucleoFamiliar = new NucleoFamiliarCaracterizacion();
+            $nucleoFamiliar->nombre_apellido = $datos_nucleo_familiar[$i]->nombre_completo;
+            $nucleoFamiliar->documento = $datos_nucleo_familiar[$i]->documento;
+            $nucleoFamiliar->tipo_documento = $datos_nucleo_familiar[$i]->tipo_documento;
+            $nucleoFamiliar->eps = $datos_nucleo_familiar[$i]->eps;
+            $nucleoFamiliar->regimen = $datos_nucleo_familiar[$i]->regimen;
+            $nucleoFamiliar->sisben = $datos_nucleo_familiar[$i]->sisben;
+            $nucleoFamiliar->E = $datos_nucleo_familiar[$i]->E;
+            $nucleoFamiliar->GP = $datos_nucleo_familiar[$i]->GP;
+            $nucleoFamiliar->SV = $datos_nucleo_familiar[$i]->SV;
+            $nucleoFamiliar->NA = $datos_nucleo_familiar[$i]->NA;
+            $nucleoFamiliar->edad = $datos_nucleo_familiar[$i]->edad;
+            $nucleoFamiliar->genero = $datos_nucleo_familiar[$i]->sexo;
+            $nucleoFamiliar->parentesco = $datos_nucleo_familiar[$i]->parentesco;
+            $nucleoFamiliar->caracterizacion_id = $caracterizacion->id;
+        }  
+
         return redirect()->route('unidadhabitantecalle.index');
     }
 

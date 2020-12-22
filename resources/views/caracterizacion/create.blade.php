@@ -460,6 +460,7 @@
                       <div class="form-group col-4">
                         <label for="apellido">Parentesco</label>
                         <input type="text" name="parentesco" class="form-control" id="parentesco" placeholder="Ingrese parentesco">
+                        <textarea name="datos_nucleo_familiar" class="form-control" id="datos_nucleo_familiar" rows="3" cols="40" style="display: none;"></textarea>
                       </div>
                       <div class="form-group col-4"  style="margin-top: 2rem;">
                         <button type="button" name="btnAgregar" id="btnAgregar" class="btn btn-primary btn-sm" onclick="agregarNucleoFamiliar()">Agregar</button>
@@ -538,7 +539,7 @@
               '</tr>';      
           $('#tblNucleoFamiliar tbody').append(fila);
 
-          //   $("#datos_poblacion").val( JSON.stringify(poblacion));
+            $("#datos_nucleo_familiar").val( JSON.stringify(nucleoFamiliar));
             $("#nombre_apellido").val("");
             $("#documento_familiar").val("");
             $("#tipo_documento_familiar").val("");
