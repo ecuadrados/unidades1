@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-12-2020 a las 20:53:58
+-- Tiempo de generación: 22-12-2020 a las 21:52:51
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -86,7 +86,7 @@ CREATE TABLE `caracterizacion` (
   `edad` int(11) DEFAULT NULL,
   `genero` varchar(50) DEFAULT NULL,
   `direccion` varchar(100) DEFAULT NULL,
-  `barrio` varchar(100) DEFAULT NULL,
+  `barrio` int(11) DEFAULT NULL,
   `localidad` varchar(50) DEFAULT NULL,
   `estrato` int(2) DEFAULT NULL,
   `celular` varchar(50) DEFAULT NULL,
@@ -142,7 +142,15 @@ CREATE TABLE `caracterizacion` (
 --
 
 INSERT INTO `caracterizacion` (`id`, `nombres`, `apellidos`, `tipo_documento`, `documento`, `edad`, `genero`, `direccion`, `barrio`, `localidad`, `estrato`, `celular`, `otro_contacto`, `email`, `estado_civil`, `condiciones_vivienda`, `tipo_vivienda`, `cuantos_cuartos`, `cuantos_hogares`, `servicio_publico`, `agua`, `electricidad`, `gas`, `alcantarillado`, `internet`, `etnia`, `persona_discapacidad`, `victima_conflicto`, `joven_riesgo`, `madre_cabeza`, `migrante_venezolano`, `certificado_permanencia`, `nivel_academico`, `programa_salud`, `nombre_eps`, `sisben`, `puntaje_sisben`, `observaciones`, `personas_cargo`, `cuantas_persona`, `niños_escolaridad`, `situacion_calle`, `consume_sustancia`, `violencia_intrafamiliar`, `pertenece_organizacion`, `empleado`, `desempleado`, `trabajador_independiente`, `informal`, `formal`, `ideas_negocios`, `cual_idea`, `emprendimiento`, `fortalecimiento`, `programa_gubernamental`, `fecha_encuesta`, `ref_id`) VALUES
-(1, 'Makoto', 'asdas', 'Cédula de Ciudadanía', '3434', 42, 'Masculino', 'fsdfsd', 'Tarjeta de Identidad', 'Tarjeta de Identidad', 3, '3434', 'sdfsd', 'evil_orochi_kairi@hotmail.com', 'Separado(a)', 'Propio', 'Cuarto', 3, 2, 'SI', 'Si', 'Si', NULL, 'Si', NULL, 'Afro', NULL, NULL, NULL, NULL, NULL, NULL, 'Bachillerato', 'Regimen_Contributivo', 'fdsf', 'Si', '12', NULL, 'Si', '3', 'Si', 'No', 'No', 'No', 'Si', 'Si', 'No', 'Si', 'Si', 'No', 'Si', 'dfgdf', 'Si', 'Si', 'Si', '2020-12-22', 123);
+(1, 'Makoto', 'asdas', 'Cédula de Ciudadanía', '3434', 42, 'Masculino', 'fsdfsd', 0, 'Tarjeta de Identidad', 3, '3434', 'sdfsd', 'evil_orochi_kairi@hotmail.com', 'Separado(a)', 'Propio', 'Cuarto', 3, 2, 'SI', 'Si', 'Si', NULL, 'Si', NULL, 'Afro', NULL, NULL, NULL, NULL, NULL, NULL, 'Bachillerato', 'Regimen_Contributivo', 'fdsf', 'Si', '12', NULL, 'Si', '3', 'Si', 'No', 'No', 'No', 'Si', 'Si', 'No', 'Si', 'Si', 'No', 'Si', 'dfgdf', 'Si', 'Si', 'Si', '2020-12-22', 123),
+(2, 'fernanda', 'asdas', 'Cédula de Ciudadanía', '3423', 34, 'Femenino', 'sdfds', 0, 'Cédula de Ciudadanía', 2, '34234', '234234', 'evil_orochi_kairi@hotmail.com', 'Soltero(a)', 'Propio', 'Apartamento', 2, 3, 'SI', 'Si', 'Si', NULL, NULL, NULL, 'Mestizo', NULL, NULL, NULL, NULL, NULL, NULL, 'Técnico', 'Regimen_Contributivo', 'sdf', NULL, '34', NULL, 'Si', '3', 'Si', 'Si', 'Si', 'Si', 'Si', 'Si', 'No', 'Si', 'Si', 'Si', 'Si', 'werwe', 'Si', 'Si', 'Si', '2020-12-23', 343),
+(3, 'gina', 'ramos', 'Cédula de Ciudadanía', '3242', 34, 'Femenino', 'sdaf', 0, 'Cédula de Ciudadanía', 2, '3423', '43', 'admin@hotmail.com', 'Unión Libre', 'Arriendo', 'Apartamento', 3, 1, 'SI', 'Si', NULL, NULL, NULL, NULL, 'Mestizo', NULL, NULL, NULL, NULL, NULL, NULL, 'Bachillerato', 'Regimen_Subsidiado', 'sdf', 'Si', '34', 'sdfsdfsdf', 'Si', NULL, 'Si', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 333),
+(4, 'asdasd', 'asdsa', 'Cédula de Ciudadanía', '333', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'wwew', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 333),
+(5, 'asdasd', 'asdsa', 'Cédula de Ciudadanía', '333', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'wwew', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 333),
+(6, 'asdas', 'asd', 'Cédula de Ciudadanía', '3434', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdfsdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 343),
+(7, 'asdas', 'asd', 'Cédula de Ciudadanía', '3434', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdfsdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 343),
+(8, 'asdas', 'asd', 'Cédula de Ciudadanía', '3434', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdfsdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 343),
+(9, 'sfsdfdsf', 'sdfds', 'Tarjeta de Identidad', '3434', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'sdsdf', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3434);
 
 -- --------------------------------------------------------
 
@@ -424,14 +432,21 @@ CREATE TABLE `nucleofamiliar_caracterizacion` (
   `regimen` varchar(50) DEFAULT NULL,
   `sisben` varchar(50) DEFAULT NULL,
   `E` varchar(50) DEFAULT NULL,
-  `G.P` varchar(50) DEFAULT NULL,
-  `S.V` varchar(50) DEFAULT NULL,
-  `N.A` varchar(50) DEFAULT NULL,
+  `GP` varchar(50) DEFAULT NULL,
+  `SV` varchar(50) DEFAULT NULL,
+  `NA` varchar(50) DEFAULT NULL,
   `edad` int(11) DEFAULT NULL,
   `genero` varchar(50) DEFAULT NULL,
   `parentesco` varchar(50) DEFAULT NULL,
   `caracterizacion_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `nucleofamiliar_caracterizacion`
+--
+
+INSERT INTO `nucleofamiliar_caracterizacion` (`id`, `nombre_apellido`, `documento`, `tipo_documento`, `eps`, `regimen`, `sisben`, `E`, `GP`, `SV`, `NA`, `edad`, `genero`, `parentesco`, `caracterizacion_id`) VALUES
+(1, 'sdfds', '343', 'Cédula de Ciudadanía', 'sdfds', 'Tarjeta de Identidad', '34', 'sdfs', 'sdf', 'sdf', 'sdf', 32, 'Masculino', 'sdfs', 9);
 
 -- --------------------------------------------------------
 
@@ -6976,7 +6991,7 @@ ALTER TABLE `beneficiarios`
 -- AUTO_INCREMENT de la tabla `caracterizacion`
 --
 ALTER TABLE `caracterizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `centro__vidas`
@@ -7018,7 +7033,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `nucleofamiliar_caracterizacion`
 --
 ALTER TABLE `nucleofamiliar_caracterizacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `poblacion_infancia`

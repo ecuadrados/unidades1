@@ -36,8 +36,8 @@
               <div class="card-body">
                 <div class="tab-content" id="custom-tabs-three-tabContent">
                   <div class="tab-pane fade show active" id="custom-tabs-three-general" role="tabpanel" aria-labelledby="custom-tabs-three-general-tab">
-                  <div class="row">
-                  <div class="form-group col-4">
+                  <div class="row">                                       
+                    <div class="form-group col-4">
                       <label for="nombre">Nombre(s)</label>
                       <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Ingrese Nombre(s)" required>
                     </div>
@@ -76,14 +76,13 @@
                       <input type="text" name="direccion" class="form-control" id="direccion" placeholder="Ingrese Dirección">
                     </div>
                     <div class="form-group col-4">
-                      <label>Barrio</label>
-                      <select class="form-control select2" name="barrio" style="width: 100%;">
-                            <option value="">--- Selecione Tipo Documento ---</option>
-                            <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
-                            <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
-                            <option value="Registro Civil">Registro Civil</option>
-                            <option value="Cédula de Extranjería">Cédula de Extranjería</option>
-                      </select>
+                      <label>Barrio</label>                     
+                      <select class="form-control select2" name="barrio" style="width: 100%;" required>
+                        <option value="">--- Selecione Barrio ---</option>
+                        @foreach ($barrios as $barrio)
+                            <option value="{{ $barrio->id }}">{{ $barrio->nombre }}</option>
+                        @endforeach
+                   </select>
                     </div>
                     <div class="form-group col-4">
                       <label>Localidad</label>
@@ -122,6 +121,14 @@
                             <option value="Unión Libre">Unión Libre</option>
                             <option value="Viudo(a)">Viudo(a)</option>
                       </select>
+                    </div>
+                    <div class="form-group col-4">
+                        <label for="numero_encuesta">Numero de Encuesta</label>
+                        <input type="number" name="numero_encuesta" class="form-control" id="numero_encuesta" placeholder="Ingrese Numero de Encuesta" required>
+                      </div>
+                    <div class="form-group col-4">
+                        <label for="fecha_encuesta">Fecha Encuesta</label>
+                        <input type="date" name="fecha_encuesta" class="form-control" id="fecha_encuesta">
                     </div>
                   </div> 
                       <!-- row -->
@@ -373,21 +380,13 @@
                         <option value="Si">Si</option>
                         <option value="No">No</option>    
                       </select>
-                    </div>
-                    <div class="form-group col-4">
-                      <label for="fecha_encuesta">Fecha Encuesta</label>
-                      <input type="date" name="fecha_encuesta" class="form-control" id="fecha_encuesta">
-                    </div> 
-                    <div class="form-group col-4">
-                      <label for="numero_encuesta">Numero de Encuesta</label>
-                      <input type="text" name="numero_encuesta" class="form-control" id="numero_encuesta" placeholder="Ingrese Numero de Encuesta">
-                    </div>
+                    </div>                    
                     </div>
                   </div>
                   <div class="tab-pane fade" id="custom-tabs-three-interes" role="tabpanel" aria-labelledby="custom-tabs-three-interes-tab">
                       <div class="row">
                         <div class="form-group col-12">
-                          <textarea name="textarea" rows="4" cols="100" placeholder="Observación"></textarea>
+                          <textarea name="observacion" rows="4" cols="100" placeholder="Observación"></textarea>
                         </div>                                             
                      </div>
                   </div>
