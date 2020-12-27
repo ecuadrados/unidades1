@@ -16,7 +16,8 @@ class CaracterizacionController extends Controller
      */
     public function index()
     {
-        //
+        // $request->user()->authorizeRoles(['user_habitante_calle','admin']); 
+        return view('caracterizacion.index');
     }
 
     /**
@@ -119,7 +120,7 @@ class CaracterizacionController extends Controller
             }  
         }
 
-        return redirect()->route('unidadhabitantecalle.index');
+        return redirect()->route('caracterizacion.index');
     }
 
     /**

@@ -56,7 +56,18 @@
                     <div class="form-group col-md-3 col-sm-12">
                         <label for="fecha_actividad">Fecha de Actividad</label>
                         <input type="date" name="fecha_actividad" class="form-control" id="fecha_actividad" placeholder="Ingrese Fecha de la Actividad" required>
-                    </div>                 
+                    </div>
+                    <div class="form-group col-md-3 col-sm-12">
+                      <label for="poblacion_objeto">Ludoteca</label>
+                        <select class="form-control" name="ludoteca" id="ludoteca" style="width: 100%;" required>
+                          <option value="">Seleccione</option>
+                          <option value="Ludoteca1">Ludoteca1</option>
+                          <option value="Ludoteca2">Ludoteca2</option>
+                          <option value="Ludoteca3">Ludoteca2</option>                          
+                        </select>                         
+                      <input type="hidden" id="actividad_id" name="actividad_id" value="{{$actividad->id}}">
+                      <textarea name="datos_poblacion" class="form-control" id="datos_poblacion" rows="3" cols="40" style="display: none;"></textarea>
+                    </div>                  
                   </div>
                   <!-- row -->
                   <div class="row" style="margin-top: 2rem;"><h3>Insertar Población</h3></div>

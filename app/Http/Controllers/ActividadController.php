@@ -57,6 +57,7 @@ class ActividadController extends Controller
         $consolidado_poblacion->lugar_actividad = $request->lugar_actividad;
         $consolidado_poblacion->fecha_actividad = $request->fecha_actividad;
         $consolidado_poblacion->barrio = $request->barrio;
+        $consolidado_poblacion->ludoteca = $request->ludoteca;        
         // $meta->fecha_meta = $request->fecha_meta;       
         $consolidado_poblacion->save();
         $datos_poblacion =  json_decode($request->datos_poblacion);

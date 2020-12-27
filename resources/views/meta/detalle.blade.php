@@ -3,8 +3,24 @@
 
 @section('content')
 <div class="callout callout-info">
-  <h5> Meta:</h5>
-  {{ $meta->nombre }}
+  <h4> Meta: {{ $meta->nombre }}</h4>
+
+  <div class="row">
+    <div class="col-md-3">
+      <h5><span class="badge badge-success">Cauntificación Meta: {{ $meta->valor }}</span></h5>     
+    </div>
+    <div class="col-md-3">
+      <h5><span class="badge badge-success">Cauntificación Meta x Año: {{ ceil($meta->valor / 4) }}</span></h5>
+    </div>
+    <div class="col-md-3">
+      <h5><span class="badge badge-success">Meta Actual: {{ $sumPoblacion }}</span></h5>
+    </div>
+    <div class="col-md-3">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width:{{  $sumPoblacion * 100 / $meta->valor}}%" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="card card-primary">
   <div class="card-header">

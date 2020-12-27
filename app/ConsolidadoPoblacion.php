@@ -14,4 +14,9 @@ class ConsolidadoPoblacion extends Model
     {
         return $this->belongsTo(Actividad::class,'actividad_id', 'id');
     }
+
+    public function ftnBarrio()
+    {
+        return $this->belongsTo(Barrio::class,'barrio', 'id');
+    }
 }

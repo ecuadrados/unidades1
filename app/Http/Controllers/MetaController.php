@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Actividad;
 use App\Meta;
+use App\Poblacion;
 use Illuminate\Http\Request;
 
 class MetaController extends Controller
@@ -61,8 +62,12 @@ class MetaController extends Controller
         // $request->user()->authorizeRoles(['user_kit','admin']); 
         $meta = Meta::findOrFail($id);
         $actividad = Actividad::where('meta_id','=',$id)->get();
-        
-        return view('meta.detalle', compact('meta','actividad'));
+        $sumPoblacion = 0;
+        for($i = 0; $i < count($actividad); $i++) {
+            $poblacion = Poblacion::where('actividad_id','=',$actividad[$i]->id)->get();
+            $sumPoblacion = $sumPoblacion + count($poblacion);
+        }
+        return view('meta.detalle', compact('meta','actividad','sumPoblacion'));
     }
 
     /**

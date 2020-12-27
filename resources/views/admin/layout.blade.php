@@ -9,7 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Ops Contratista | Inicio</title>
+  <title>Unidades | Inicio</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('adminlte/plugins/fontawesome-free/css/all.min.css') }}">
@@ -255,12 +255,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           @endif
-          @if(@Auth::user()->hasRole('admin'))
+          @if(@Auth::user()->hasRole('infancia') || @Auth::user()->hasRole('admin'))
           <li class="nav-item">
             <a href="{{route('meta.index')}}" class="nav-link" style="color: white !important;">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Infancia
+              </p>
+            </a>
+          </li>
+          @endif
+          @if(@Auth::user()->hasRole('caracterizacion') || @Auth::user()->hasRole('admin'))
+          <li class="nav-item">
+            <a href="{{route('caracterizacion.create')}}" class="nav-link" style="color: white !important;">
+              <i class="nav-icon fas fa-user"></i>
+              <p>
+                Caracterización
               </p>
             </a>
           </li>
@@ -314,7 +324,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
     <div class="p-3">
-      <h5>OPSoft</h5>
+      <h5>Unidades</h5>
       <p>Contenido</p>
     </div>
   </aside>
@@ -324,10 +334,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Ing. Zoe Gonzalez Sarmiento
+      Unidades Secretaria de Participación
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2020 <a href="#"> Ops Contratista</a>.</strong> Todos los derechos reservados.
+    <strong>Copyright &copy; 2020 <a href="#">Unidades</a>.</strong> Todos los derechos reservados.
   </footer>
 </div>
 <!-- ./wrapper -->
