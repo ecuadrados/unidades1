@@ -47,6 +47,10 @@
                           <option value="Fortalecimiento Familiar">Fortalecimiento Familiar</option>                        
                         </select>                    
                     </div>
+                    <div class="form-group">
+                      <label>Observación</label>
+                      <textarea name="observacion" class="form-control" id="observacion" rows="3" cols="40"></textarea>
+                    </div>
                   <!-- <div class="form-group">
                     <label for="contratista_fecha_inicio">Fecha</label>
                     <input type="date" name="fecha_meta" class="form-control" id="fecha_meta" required>

@@ -63,6 +63,19 @@
                     <!-- /.info-box -->
                 </div>
                 <!-- /.col -->
+                <div class="col-md-3 col-sm-6 col-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-info"><i class="fas fa-book-user"></i><i class="fas fa-book"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Ludoteca</span>
+                        <span class="info-box-number">{{ $item->ludoteca }}</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
                 <div class="col-md-6 col-sm-6 col-12">
                     <div class="info-box">
                         <span class="info-box-icon bg-info"><i class="fas fa-restroom"></i></span>

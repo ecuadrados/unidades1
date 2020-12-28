@@ -34,7 +34,6 @@
                           <option value="Docentes">Docentes</option>
                         </select>                         
                       <input type="hidden" id="actividad_id" name="actividad_id" value="{{$actividad->id}}">
-                      <textarea name="datos_poblacion" class="form-control" id="datos_poblacion" rows="3" cols="40" style="display: none;"></textarea>
                     </div>                 
                     <div class="form-group col-md-3 col-sm-12">
                         <label for="organizacion_actividad">Organización o Institución</label>
@@ -63,7 +62,7 @@
                           <option value="">Seleccione</option>
                           <option value="Ludoteca1">Ludoteca1</option>
                           <option value="Ludoteca2">Ludoteca2</option>
-                          <option value="Ludoteca3">Ludoteca2</option>                          
+                          <option value="Ludoteca3">Ludoteca3</option>                          
                         </select>                         
                       <input type="hidden" id="actividad_id" name="actividad_id" value="{{$actividad->id}}">
                       <textarea name="datos_poblacion" class="form-control" id="datos_poblacion" rows="3" cols="40" style="display: none;"></textarea>

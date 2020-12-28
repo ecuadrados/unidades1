@@ -21,6 +21,13 @@
       </div>
     </div>
   </div>
+  @if($meta->observacion !="")
+  <div class="row">
+    <div class="col-md-12">
+      <p><strong>Observación:</strong> {{ $meta->observacion }}</p>
+    </div>
+  </div>
+   @endif
 </div>
 <div class="card card-primary">
   <div class="card-header">

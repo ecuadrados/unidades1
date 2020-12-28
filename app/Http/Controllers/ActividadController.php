@@ -61,9 +61,7 @@ class ActividadController extends Controller
         // $meta->fecha_meta = $request->fecha_meta;       
         $consolidado_poblacion->save();
         $datos_poblacion =  json_decode($request->datos_poblacion);
-        // return count($datos_poblacion);;
-        // return $datos_poblacion[1]->nombre_completo;
-        // Variables
+        
         $cantFemenino = 0;
         $cantMasculino = 0;
         $edad1 = 0; $edad2 = 0; $edad3 = 0; $edad4 = 0;

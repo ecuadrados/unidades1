@@ -14,9 +14,9 @@ class CaracterizacionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // $request->user()->authorizeRoles(['user_habitante_calle','admin']); 
+        $request->user()->authorizeRoles(['caracterizacion','admin']); 
         return view('caracterizacion.index');
     }
 
@@ -25,9 +25,9 @@ class CaracterizacionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        // $request->user()->authorizeRoles(['user_habitante_calle','admin']); 
+        $request->user()->authorizeRoles(['caracterizacion','admin']); 
         $barrios = Barrio::all()->sortBy("nombre");;
         return view('caracterizacion.create',compact('barrios'));
     }
@@ -40,6 +40,7 @@ class CaracterizacionController extends Controller
      */
     public function store(Request $request)
     {
+        $request->user()->authorizeRoles(['caracterizacion','admin']); 
         $caracterizacion = new Caracterizacion();
         $caracterizacion->nombres = $request->nombre;
         $caracterizacion->apellidos = $request->apellido;
