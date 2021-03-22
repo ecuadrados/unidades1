@@ -74,14 +74,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Unidad de la Mujer</a>
-                    <a href="https://laracasts.com">Unidad de Juventud</a>
-                    <a href="https://laravel-news.com">Unidad Habitante de la Calle</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a>Unidad de la Mujer</a>
+                    <a>Unidad de Juventud</a>
+                    <a>Unidad Habitante de la Calle</a>
+                    <a>Formación Ciudadana</a>
+                    <a>Adulto Mayor</a>                    
                 </div>
             </div>
         </div>
