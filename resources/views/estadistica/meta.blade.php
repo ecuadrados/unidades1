@@ -280,7 +280,15 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <span style="font-size: 24px;">Lista de Metas</span>
+                    <span style="font-size: 24px;">Lista de Metas</span>                    
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                          <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                 </div>
 
                 <div class="card-body">      

@@ -229,8 +229,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="{{route('unidadjuventud.create')}}" class="nav-link" style="color: white !important;">
               <i class="nav-icon fas fa-poll"></i>
               <p>
-               Juventud
-                <span class="right badge badge-danger">Nuevo</span>
+               Juventud                
               </p>
             </a>
           </li>
@@ -275,6 +274,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <a href="{{route('estadistica.meta')}}" class="nav-link" style="color: white !important;">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Estadisticas</p>
+                  <span class="right badge badge-danger">Nuevo</span>
                 </a>
               </li>              
             </ul>

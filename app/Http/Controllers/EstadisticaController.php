@@ -75,12 +75,7 @@ class EstadisticaController extends Controller
                 'meta_infacia.programa'
                 )
             ->get();
-            // foreach($user as $us){
-            //     // echo $us->meta_id;
-            //     // echo $us->actividad->meta->valor;
-            //     echo "US: ".$us->meta_id."<br/>";
-            // }
-            //     return $user;
+           
         return view('estadistica.meta',compact(
             'poblacion','meta','SumaMetaSugerida','actividad','cantFemenino',
             'cantMasculino','cantVictima','cantDiscapacidad',
