@@ -10,13 +10,7 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Estadisticas Datos Generales</h1>
-          </div><!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v2</li>
-            </ol>
-          </div><!-- /.col -->
+          </div><!-- /.col -->        
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
@@ -218,9 +212,9 @@
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body p-0">
+              <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table m-0">
+                  <table id="tblUnidadComunera"  class="table table-bordered table-striped">
                     <thead>
                     <tr>
                       <th>Unidad Comunera</th>
@@ -273,7 +267,16 @@
         <!-- /.row -->
         <!-- Main row -->
        <div class="row">
-        <h3 class="m-0 text-dark">Estadisticas Por Metas</h3>
+       <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-12">
+            <h1 class="m-0 text-dark">Estadisticas Por Metas</h1>
+          </div><!-- /.col -->        
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
@@ -281,7 +284,7 @@
                 </div>
 
                 <div class="card-body">      
-                    <table id="tblMeta" class="table table-bordered table-striped">
+                    <table id="tblPoblacionMeta" class="table table-bordered table-striped">
                         <thead>
                             <tr>
                             <th scope="col">#</th>
@@ -348,9 +351,9 @@
 </style>
 
 <!-- Resources -->
-<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="{{ asset('amcharts/lib/4/core.js') }}"></script>
+<script src="{{ asset('amcharts/lib/4/charts.js') }}"></script>
+<script src="{{ asset('amcharts/lib/4/animated.js') }}"></script>
 
 <!-- Chart code -->
 <script>  
