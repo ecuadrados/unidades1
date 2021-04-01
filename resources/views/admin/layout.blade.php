@@ -237,7 +237,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           @endif
           @if(@Auth::user()->hasRole('user_habitante_calle') || @Auth::user()->hasRole('admin'))
           <li class="nav-item">
-            <a href="{{route('unidadhabitantecalle.create')}}" class="nav-link" style="color: white !important;">
+            <a href="{{route('unidadhabitantecalle.index')}}" class="nav-link" style="color: white !important;">
               <i class="nav-icon fas fa-poll"></i>
               <p>
                 Habitante de Calle
@@ -255,14 +255,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           @endif
-          @if(@Auth::user()->hasRole('infancia') || @Auth::user()->hasRole('admin'))
-          <li class="nav-item">
-            <a href="{{route('meta.index')}}" class="nav-link" style="color: white !important;">
+          @if(@Auth::user()->hasRole('infancia') || @Auth::user()->hasRole('admin'))        
+          <li class="nav-item has-treeview">
+            <a class="nav-link" style="color: white !important;">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Infancia
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('meta.index')}}" class="nav-link" style="color: white !important;">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Metas</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('estadistica.meta')}}" class="nav-link" style="color: white !important;">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Estadisticas</p>
+                </a>
+              </li>              
+            </ul>
           </li>
           @endif
           @if(@Auth::user()->hasRole('caracterizacion') || @Auth::user()->hasRole('admin'))

@@ -35,7 +35,11 @@
                   </div> 
                   <div class="form-group">
                     <label for="nombre">Cuantificación de meta</label>
-                    <input type="number" min="0" name="valor" class="form-control" id="valor" placeholder="Ingrese Cuantificación de meta">
+                    <input type="number" min="1" name="valor" class="form-control" id="valor" placeholder="Ingrese Cuantificación de meta">
+                  </div>
+                  <div class="form-group">
+                    <label for="nombre">Meta Sugerida</label>
+                    <input type="number" min="1" name="meta_sugerida" class="form-control" id="meta_sugerida" placeholder="Ingrese Meta Sugerida">
                   </div>
                   <div class="form-group">
                     <label>Programa</label>

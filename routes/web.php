@@ -35,7 +35,9 @@ Route::post('/unidadgeneral/kit', 'KitController@store')->name('kit.store');
 Route::post('/actividad/poblacion', 'ActividadController@poblacion')->name('actividad.poblacion');
 Route::get('/actividad/verpoblacion/{id}', 'ActividadController@verpoblacion')->name('actividad.verpoblacion');
 
-// Route::get('/unidadgeneral/show/{id}', 'UnidadGeneralController@show')->name('unidadgeneral.show');
+// Route::get('/unidadhabitantecalle/show/{id}', 'unidadhabitantecalle@show')->name('unidadhabitantecalle.show');
+
+Route::get('/estadistica/meta', 'EstadisticaController@meta')->name('estadistica.meta');
 
 
 

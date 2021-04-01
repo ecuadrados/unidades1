@@ -18,7 +18,9 @@ class UnidadHabitanteCalleController extends Controller
     public function index(Request $request)
     {
         $request->user()->authorizeRoles(['user_habitante_calle','admin']); 
-        return view('unidad_habitante_calle.index');
+        $habitantes = Unidad_Habitante_Calle::all();
+
+        return view('unidad_habitante_calle.index',compact('habitantes'));
     }
 
     /**
@@ -124,7 +126,9 @@ class UnidadHabitanteCalleController extends Controller
      */
     public function show($id)
     {
-        //
+        $habitante = Unidad_Habitante_Calle::findOrFail($id);
+        $habitantes_familiar = PoblacionHC::where('habitante_calle_id',$id)->get();
+        return view('unidad_habitante_calle.show', compact('habitante','habitantes_familiar'));
     }
 
     /**

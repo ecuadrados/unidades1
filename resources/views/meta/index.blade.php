@@ -16,8 +16,10 @@
                             <tr>
                             <th scope="col">#</th>
                             <th scope="col">Meta</th>
-                            <th scope="col">Meta x Año</th>                           
-                            <th scope="col">Meta Total</th>                           
+                            <th scope="col">Meta Sugerida</th>                           
+                            <th scope="col">Meta Sugerida x Año</th>
+                            <th scope="col">Meta</th>                           
+                            <th scope="col">Meta x Año</th>
                             <th scope="col">Acción</th>
                             </tr>
                         </thead>
@@ -26,8 +28,10 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $item->nombre }}</td>
-                                <td>{{ ceil($item->valor / 4) }}</td>                               
+                                <td>{{ $item->meta_sugerida }}</td>                               
+                                <td>{{ ceil($item->meta_sugerida / 4) }}</td>                               
                                 <td>{{ $item->valor }}</td>                               
+                                <td>{{ ceil($item->valor / 4) }}</td>                               
                                 <td>
                                                                      
                                     <a href="{{route('meta.show', $item)}}" class="btn btn-success btn-sm">Actividad</a>

@@ -41,13 +41,21 @@
                     </div>
                     <div class="form-group col-md-3 col-sm-12">
                   <label>Barrio</label>
-                  <select class="form-control select2" name="barrio" style="width: 100%;" required>
+                  <select class="form-control select2" name="barrio" id="barrio" onchange="agregarDatos()" style="width: 100%;" required>
                         <option value="">--- Selecione Barrio ---</option>
                         @foreach ($barrios as $barrio)
-                            <option value="{{ $barrio->id }}">{{ $barrio->nombre }}</option>
+                            <option value="{{ $barrio->id }}"  data-nombre="{{$barrio->unidad_comunera}}" data-localidad="{{$barrio->localidad}}" >{{ $barrio->nombre }}</option>
                         @endforeach
                    </select>
                 </div>
+                    <div class="form-group col-md-3 col-sm-12">
+                        <label for="lugar_actividad">Unidad Comunera</label>
+                        <input type="text" name="unidad_comunera" class="form-control" id="unidad_comunera" readonly>
+                    </div>
+                    <div class="form-group col-md-3 col-sm-12">
+                        <label for="lugar_actividad">Localidad</label>
+                        <input type="text" name="localidad" class="form-control" id="localidad" readonly>
+                    </div>
                     <div class="form-group col-md-3 col-sm-12">
                         <label for="lugar_actividad">Lugar de Actividad</label>
                         <input type="text" name="lugar_actividad" class="form-control" id="lugar_actividad" placeholder="Ingrese Lugar de la Actividad" required>
@@ -275,5 +283,14 @@
       alert("Nombre ,documento y sexo no deben ir vacio")
     }
   }
+
+  function agregarDatos() {
+    
+    var objeto_producto = $('#barrio').find(':selected');
+    let unidad_comunera = objeto_producto[0].dataset.nombre;
+    let localidad = objeto_producto[0].dataset.localidad;
+    $("#unidad_comunera").val(unidad_comunera);
+    $("#localidad").val(localidad);
+}
 </script>
 @endsection

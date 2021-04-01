@@ -43,6 +43,7 @@ class MetaController extends Controller
         $meta = new Meta();
         $meta->nombre = $request->nombre;
         $meta->valor = $request->valor;
+        $meta->meta_sugerida = $request->meta_sugerida;
         $meta->programa = $request->programa;
         $meta->observacion = $request->observacion;        
         // $meta->fecha_meta = $request->fecha_meta;       

@@ -20,6 +20,21 @@
         <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width:{{  $sumPoblacion * 100 / $meta->valor}}%" aria-valuemax="100"></div>
       </div>
     </div>
+    <!-- Meta Sugerida -->
+    <div class="col-md-3">
+      <h5><span class="badge badge-success">Meta Sugerida: {{ $meta->meta_sugerida }}</span></h5>     
+    </div>
+    <div class="col-md-3">
+      <h5><span class="badge badge-success">Meta Sugerida x Año: {{ ceil($meta->meta_sugerida / 4) }}</span></h5>
+    </div>
+    <div class="col-md-3">
+      <h5><span class="badge badge-success">Meta Actual: {{ $sumPoblacion }}</span></h5>
+    </div>
+    <div class="col-md-3">
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width:{{  $sumPoblacion * 100 / $meta->valor}}%" aria-valuemax="100"></div>
+      </div>
+    </div>
   </div>
   @if($meta->observacion !="")
   <div class="row">

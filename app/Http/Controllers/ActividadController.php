@@ -57,6 +57,7 @@ class ActividadController extends Controller
         $consolidado_poblacion->lugar_actividad = $request->lugar_actividad;
         $consolidado_poblacion->fecha_actividad = $request->fecha_actividad;
         $consolidado_poblacion->barrio = $request->barrio;
+        $consolidado_poblacion->unidad_comunera = $request->unidad_comunera;
         $consolidado_poblacion->ludoteca = $request->ludoteca;        
         // $meta->fecha_meta = $request->fecha_meta;       
         $consolidado_poblacion->save();
@@ -83,6 +84,8 @@ class ActividadController extends Controller
             $poblacion->nombre_funcionario = $datos_poblacion[$i]->funcionario;
             $poblacion->actividad_id = $request->actividad_id;            
             $poblacion->consolidado_id = $consolidado_poblacion->id;  
+            $poblacion->barrio_id = $request->barrio;
+            $poblacion->unidad_comunera = $request->unidad_comunera;
             // calcular datos
             if($poblacion->sexo == "Femenino" ) {
                 $cantFemenino++;
