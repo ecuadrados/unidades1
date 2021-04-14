@@ -80,7 +80,9 @@ class MetaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $meta = Meta::findOrFail($id);
+        // return $meta;
+        return view('meta.actualizar', compact('meta'));
     }
 
     /**
@@ -92,7 +94,15 @@ class MetaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $meta = Meta::findOrFail($id);
+        $meta->nombre = $request->nombre;
+        $meta->valor = $request->valor;
+        $meta->meta_sugerida = $request->meta_sugerida;
+        $meta->programa = $request->programa;
+        $meta->observacion = $request->observacion;        
+        $meta->save();
+
+        return redirect()->route('meta.index');
     }
 
     /**

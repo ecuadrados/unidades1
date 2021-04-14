@@ -34,6 +34,7 @@
                                 <td>{{ ceil($item->valor / 4) }}</td>                               
                                 <td>
                                                                      
+                                    <a href="{{route('meta.edit', $item)}}" class="btn btn-info btn-sm">Editar</a>
                                     <a href="{{route('meta.show', $item)}}" class="btn btn-success btn-sm">Actividad</a>
                                    {{-- <a href="{{route('contratista.edit', $item)}}" class="btn btn-warning btn-sm">Editar</a>
                                     <form action="{{ route('contratista.destroy', $item) }}" class="d-inline" method="POST">
