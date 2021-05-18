@@ -44,20 +44,20 @@ class UnidadHabitanteCalleController extends Controller
     public function store(Request $request)
     {
         /** */
-        $messages = [
-            'documento.unique' => 'Este número de cedula ya esta registrado',
-        ];
-        $validator = Validator::make($request->all(), [
-            'documento' => 'required|unique:unidad__habitante__calles',
+        // $messages = [
+        //     'documento.unique' => 'Este número de cedula ya esta registrado',
+        // ];
+        // $validator = Validator::make($request->all(), [
+        //     'documento' => 'required|unique:unidad__habitante__calles',
            
-        ],$messages );
+        // ],$messages );
 
-        if ($validator->fails()) {
-            $errors = $validator->errors()->all();
-            return redirect('unidadhabitantecalle/create')
-                        ->withErrors($errors)
-                        ->withInput();
-        }
+        // if ($validator->fails()) {
+        //     $errors = $validator->errors()->all();
+        //     return redirect('unidadhabitantecalle/create')
+        //                 ->withErrors($errors)
+        //                 ->withInput();
+        // }
        
         /** */
         $request->user()->authorizeRoles(['user_habitante_calle','admin']); 

@@ -53,11 +53,4 @@
         </div>
     </div>
 </div>
-<!-- jQuery -->
-<script src="{{ asset('adminlte/plugins/jquery/jquery.min.js') }}"></script>
-<script>
-    $(function () {
-    $("#tblMeta").DataTable();
-    });
-</script>
 @endsection

@@ -84,11 +84,10 @@
                     <div class="form-group col-4">
                       <label>Localidad</label>
                       <select class="form-control select2" name="localidad" style="width: 100%;">
-                            <option value="">--- Selecione Tipo Documento ---</option>
-                            <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
-                            <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
-                            <option value="Registro Civil">Registro Civil</option>
-                            <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+                            <option value="">--- Selecione Locallidad ---</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
                       </select>
                     </div>
                     <div class="form-group col-4">

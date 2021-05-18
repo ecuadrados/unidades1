@@ -11,7 +11,7 @@
                 </div>
 
                 <div class="card-body">      
-                    <table id="tblMeta" class="table table-bordered table-striped">
+                    <table id="tblActividad" class="table table-bordered table-striped">
                         <thead>
                             <tr>
                             <th scope="col">#</th>
@@ -46,11 +46,4 @@
         </div>
     </div>
 </div>
-<!-- jQuery -->
-<script src="{{ asset('adminlte/plugins/jquery/jquery.min.js') }}"></script>
-<script>
-    $(function () {
-    $("#tblMeta").DataTable();
-    });
-</script>
 @endsection

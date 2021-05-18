@@ -254,7 +254,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
           </li>
           @endif
-          @if(@Auth::user()->hasRole('infancia') || @Auth::user()->hasRole('admin'))        
+          @if(@Auth::user()->hasRole('infancia') || @Auth::user()->hasRole('admin') || @Auth::user()->hasRole('infancia_digitador'))        
           <li class="nav-item has-treeview">
             <a class="nav-link" style="color: white !important;">
               <i class="nav-icon fas fa-user"></i>
@@ -282,7 +282,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           @endif
           @if(@Auth::user()->hasRole('caracterizacion') || @Auth::user()->hasRole('admin'))
           <li class="nav-item">
-            <a href="{{route('caracterizacion.create')}}" class="nav-link" style="color: white !important;">
+            <a href="{{route('caracterizacion.index')}}" class="nav-link" style="color: white !important;">
               <i class="nav-icon fas fa-user"></i>
               <p>
                 Caracterización
@@ -381,8 +381,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{ asset('adminlte/js/adminlte.min.js') }}"></script>
 
 <script src="{{ asset('js/datatablelistar.js') }}"></script>
+<script src="{{ asset('js/datatable_caracterizacion.js') }}"></script>
+<script src="{{ asset('js/datatable_meta.js') }}"></script>
+<script src="{{ asset('js/datatable_actividad.js') }}"></script>
 <script src="{{ asset('js/datatablelistarcentro.js') }}"></script>
-<script src="{{ asset('js/actividad.js') }}"></script>
+{{--<script src="{{ asset('js/actividad.js') }}"></script>--}}
 <!-- Select2 -->
 <script src="{{ asset('adminlte/plugins/select2/js/select2.full.min.js') }}"></script>
 <script>

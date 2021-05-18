@@ -45,7 +45,7 @@
                   <div class="row">
                     <div class="form-group col-4">
                       <label for="fecha_aplicacion">Fecha Aplicación</label>
-                      <input type="date" name="fecha_aplicacion" class="form-control" id="fecha_aplicacion"  value="{{ old('fecha_aplicacion') }}" required>
+                      <input type="date" name="fecha_aplicacion" class="form-control" id="fecha_aplicacion"  value="{{ old('fecha_aplicacion') }}">
                     </div>
                     <div class="form-group col-8">
                       <label for="zona">Zona de Intervención</label>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="form-group col-4">
                     <label>Tipo Documento</label>
-                    <select class="form-control select2" name="tipo_documento" style="width: 100%;" value="{{ old('tipo_documento') }}" required>
+                    <select class="form-control select2" name="tipo_documento" style="width: 100%;" value="{{ old('tipo_documento') }}">
                           <option value="">--- Selecione Tipo Documento ---</option>
                           <option value="Cédula" {{ old('tipo_documento') == "Cédula" ? "selected" : "" }}>Cédula</option>
                           <option value="Tarjeta de Identidad" {{ old('tipo_documento') == "Tarjeta de Identidad" ? "selected" : "" }}>Tarjeta de Identidad</option>
@@ -69,7 +69,7 @@
                   </div>
                     <div class="form-group col-4">
                       <label for="documento">Documento</label>
-                      <input type="text" name="documento" class="form-control" id="documento" value="{{ old('documento') }}" placeholder="Ingrese Documento" required>
+                      <input type="text" name="documento" class="form-control" id="documento" value="{{ old('documento') }}" placeholder="Ingrese Documento">
                     </div>
                   </div> 
                   <!-- row  -->
@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-group col-4">
                       <label for="fecha_nacimiento">Fecha Nacimiento</label>
-                      <input type="date" name="fecha_nacimiento" class="form-control" id="fecha_nacimiento"  value="{{ old('fecha_nacimiento') }}" required>
+                      <input type="date" name="fecha_nacimiento" class="form-control" id="fecha_nacimiento"  value="{{ old('fecha_nacimiento') }}">
                     </div>
                     <div class="form-group col-4">
                       <label for="pais">País Nacimiento</label>
@@ -115,7 +115,7 @@
                     </div>
                     <div class="form-group col-4 col-md-4 col-sm-12">
                       <label>Barrio Residencia</label>
-                      <select class="form-control select2" name="barrio" style="width: 100%;" required>
+                      <select class="form-control select2" name="barrio" style="width: 100%;">
                             <option value="">--- Selecione Barrio ---</option>
                             @foreach ($barrios as $barrio)
                                 <option value="{{ $barrio->id }}" {{ old('barrio') == $barrio->id ? "selected" : "" }}>{{ $barrio->nombre }}</option>

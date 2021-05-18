@@ -16,8 +16,9 @@ class CaracterizacionController extends Controller
      */
     public function index(Request $request)
     {
-        $request->user()->authorizeRoles(['caracterizacion','admin']); 
-        return view('caracterizacion.index');
+        $request->user()->authorizeRoles(['caracterizacion','admin']);
+        $caracterizaciones = Caracterizacion::all(); 
+        return view('caracterizacion.index',compact('caracterizaciones'));
     }
 
     /**
@@ -132,7 +133,9 @@ class CaracterizacionController extends Controller
      */
     public function show($id)
     {
-        //
+        $caracterizacion = Caracterizacion::findOrFail($id);
+        $caracterizaion_familiar = NucleoFamiliarCaracterizacion::where('caracterizacion_id',$id)->get();
+        return view('caracterizacion.show', compact('caracterizacion','caracterizaion_familiar'));
     }
 
     /**

@@ -72,6 +72,7 @@
                                 <option value="user_habitante_calle">Unidad Habitante Calle</option>
                                 <option value="user_kit">Entrega Kit</option>
                                 <option value="infancia">Infancia</option>
+                                <option value="infancia_digitador">Infancia Digitador</option>
                                 <option value="caracterizacion">Caracterización</option>
                             </select>
                         </div>

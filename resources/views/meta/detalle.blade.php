@@ -103,11 +103,13 @@
                             <a href="{{route('actividad.show', $item)}}" class="btn btn-success btn-sm">Crear Población</a>
                               <a href="{{route('actividad.verpoblacion', $item)}}" class="btn btn-success btn-sm">Ver Población</a>
                               {{-- <a href="{{route('contratista.edit', $item)}}" class="btn btn-warning btn-sm">Editar</a>--}}
+                              @if ( @Auth::user()->hasRole('infancia') || @Auth::user()->hasRole('admin')  )
                                 <form action="{{ route('actividad.destroy', $item) }}" class="d-inline" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Esta Seguro?')">Borrar</button>
                                 </form> 
+                              @endif
                             </td>
                         </tr>
                         @endforeach
