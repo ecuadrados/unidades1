@@ -34,6 +34,7 @@ Route::get('/unidadgeneral/usuario/{centro?}', 'UnidadGeneralController@lista')-
 Route::post('/unidadgeneral/kit', 'KitController@store')->name('kit.store');
 Route::post('/actividad/poblacion', 'ActividadController@poblacion')->name('actividad.poblacion');
 Route::get('/actividad/verpoblacion/{id}', 'ActividadController@verpoblacion')->name('actividad.verpoblacion');
+Route::get('/actividad/listarpoblacion/{id}', 'ActividadController@listarpoblacion')->name('actividad.listarpoblacion');
 
 // Route::get('/unidadhabitantecalle/show/{id}', 'unidadhabitantecalle@show')->name('unidadhabitantecalle.show');
 

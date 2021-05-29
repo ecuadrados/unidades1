@@ -101,7 +101,8 @@
                             <td>{{ $item->nombre }}</td>
                             <td>                                                                     
                             <a href="{{route('actividad.show', $item)}}" class="btn btn-success btn-sm">Crear Población</a>
-                              <a href="{{route('actividad.verpoblacion', $item)}}" class="btn btn-success btn-sm">Ver Población</a>
+                            <a href="{{route('actividad.listarpoblacion', $item)}}" class="btn btn-success btn-sm">Listar Población</a>
+                              <a href="{{route('actividad.verpoblacion', $item)}}" class="btn btn-success btn-sm">Estadistica Población</a>
                               {{-- <a href="{{route('contratista.edit', $item)}}" class="btn btn-warning btn-sm">Editar</a>--}}
                               @if ( @Auth::user()->hasRole('infancia') || @Auth::user()->hasRole('admin')  )
                                 <form action="{{ route('actividad.destroy', $item) }}" class="d-inline" method="POST">

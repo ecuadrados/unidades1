@@ -14,4 +14,9 @@ class Poblacion extends Model
     {
         return $this->belongsTo(Actividad::class,'actividad_id', 'id');
     }
+
+    public function barrio()
+    {
+        return $this->belongsTo(Barrio::class,'barrio_id', 'id');
+    }
 }

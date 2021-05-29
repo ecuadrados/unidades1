@@ -165,6 +165,12 @@ class ActividadController extends Controller
         return view('actividad.poblacion',compact('consolidado','poblacion'));
     }
 
+    public function listarpoblacion($id)
+    {
+        $poblacion = Poblacion::where('actividad_id','=',$id)->get();           
+        return view('actividad.lista_poblacion',compact('poblacion'));
+    }
+
     /**
      * Display the specified resource.
      *
